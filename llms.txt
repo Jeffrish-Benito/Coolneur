@@ -1,0 +1,27 @@
+# coolneur
+
+> Cooldown and charge manager for JavaScript and TypeScript with named streams, classic timers, multi-charge regeneration, snapshots, events, and deterministic clocks. Zero runtime dependencies.
+
+npm: coolneur
+
+## Docs
+- [README](https://github.com/jeffrish-benito/coolneur#readme): Installation, API, examples, limits
+- [Full docs](https://github.com/jeffrish-benito/coolneur/blob/main/llms-full.txt): README mirrored for LLM ingestion
+- [Examples](https://github.com/jeffrish-benito/coolneur/tree/main/examples): Runnable JavaScript examples
+
+## API surface
+- `Coolneur` and `CoolneurStream` classes; default export is `Coolneur`
+- `Coolneur.stream(name)` creates or returns a named stream
+- `define(name, config)` defines classic or charge-based cooldowns
+- `tryUse(name)` synchronously checks and consumes; `use(name)` throws if unavailable
+- `start`, `remaining`, `isReady`, `charges`, `timeUntilNextCharge`, `timeUntilFull`
+- `pause`, `resume`, `reset`, `delete`, `list`, `snapshot`, `restore`
+- Manager events: `on`, `off`; wildcard event listener: `on('*', listener)`
+
+## Important limits
+- Streams are in-memory and scoped to one manager instance; shared charge pools are local to one stream.
+- No database adapter, distributed lock, automatic persistence, Discord context parser, or security-grade API rate limiting.
+- Version 1.0.0 does not export `check`, `peek`, `consume`, `scope`, `addBypass`, or `checkAsync`.
+
+## License
+- MIT
