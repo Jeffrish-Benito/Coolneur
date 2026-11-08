@@ -1,0 +1,63 @@
+{
+  "name": "coolneur",
+  "version": "1.0.0",
+  "description": "Cooldown and charge manager for JavaScript and TypeScript: classic timers, multi-charge abilities, scoped streams, pause/resume, snapshots, and deterministic clocks. Zero runtime dependencies.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "llms.txt",
+    "llms-full.txt",
+    "examples"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/index.js",
+    "prepack": "npm run check && npm test"
+  },
+  "keywords": [
+    "cooldown",
+    "cooldowns",
+    "cooldown-manager",
+    "cooldown-management",
+    "rate-limit",
+    "rate-limiting",
+    "throttle",
+    "timer",
+    "charges",
+    "multi-charge",
+    "charge-system",
+    "game-cooldown",
+    "ability-cooldown",
+    "javascript",
+    "typescript",
+    "zero-dependency",
+    "user-cooldown",
+    "guild-cooldown",
+    "channel-cooldown",
+    "command-cooldown"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeffrish-benito/coolneur.git"
+  },
+  "homepage": "https://github.com/jeffrish-benito/coolneur#readme",
+  "bugs": {
+    "url": "https://github.com/jeffrish-benito/coolneur/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
