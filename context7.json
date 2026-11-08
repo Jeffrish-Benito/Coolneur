@@ -1,0 +1,19 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "coolneur",
+  "description": "Cooldown and charge manager for JavaScript and TypeScript with named streams, classic timers, multi-charge regeneration, snapshots, events, and deterministic clocks.",
+  "folders": [],
+  "excludeFolders": [
+    "node_modules",
+    "dist",
+    "test",
+    ".git"
+  ],
+  "excludeFiles": [
+    "package-lock.json"
+  ],
+  "rules": [
+    "Use only the documented version 1 API: tryUse, use, start, remaining, isReady, charges, timeUntilNextCharge, timeUntilFull, pause, resume, reset, delete, snapshot, and restore.",
+    "Streams and shared charge pools are in-memory and local to one Coolneur manager instance; do not present them as distributed locks or security-grade rate limits."
+  ]
+}
